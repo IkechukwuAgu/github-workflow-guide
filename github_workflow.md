@@ -326,3 +326,74 @@ This implements user login functionality.
 - Click Create Pull Request ✅.
 
 - Now, the repo maintainer (or your teammate) can review it.
+
+
+
+---
+
+🔎 Steps to Review a Pull Request
+-----------------------------------
+
+#### 1. Open the PR
+
+- Go to the repository on GitHub.
+
+- Click on the "Pull requests" tab.
+
+- Select the PR you want to review.
+
+#### 2. Check the Description
+
+- Read the title and description.
+
+- Make sure the author explained what changes they made and why.
+
+#### 3. Look at the Commits
+
+- Scroll down to see the commit history.
+
+- This shows how the changes were built step by step.
+
+#### 4. Review the Files Changed
+
+- Click on the "Files changed" tab.
+
+- Carefully read the code line by line.
+
+- Look for:
+  - Code style (is it consistent with the project?)
+  - Functionality (does it do what it says?)
+  - Bugs, typos, or logic errors
+  - Security issues
+  - Performance concerns
+
+
+#### 5. Leave Comments
+
+- Hover over a line of code and click the "+" icon.
+
+- Write a clear comment (e.g., "Maybe use map() instead of forEach for cleaner code").
+
+#### 6. Test Locally (Optional but Good)
+
+If you can, check out the PR branch locally:
+
+````bash
+git fetch origin pull/PR_NUMBER/head:pr-branch
+git checkout pr-branch
+````
+
+
+- Run the code to confirm it works.
+
+#### 7. Submit Review
+
+- After reviewing, click "Review changes" (top-right).
+
+- Choose one:
+
+  - ✅ Approve → if everything is fine
+
+  - 💬 Comment → if you just want to give feedback
+
+  - ❌ Request changes → if fixes are needed before merging
