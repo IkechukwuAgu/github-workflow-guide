@@ -253,3 +253,76 @@ Now the merge is successful 🚀.
 
 ---
 
+🔧 How to Create a Pull Request (PR)
+---
+
+### 1. Fork or Clone the Repository
+
+- If it’s not your repo:
+
+```bash
+git clone https://github.com/username/repo.git
+
+```
+
+- If it’s your repo, just clone it normally.
+
+### 2. Create a New Branch
+
+Always create a new branch for your changes:
+
+```bash 
+git checkout -b feature-branch-name
+```
+
+👉 Example:
+
+```bash 
+git checkout -b add-login-form
+```
+### 3. Make Your Changes
+
+- Edit the code, add files, etc.
+
+- When done, stage and commit:
+
+```bash 
+git add .
+git commit -m "Added login form component"
+```
+### 4. Push Your Branch to GitHub
+
+````bash
+git push origin feature-branch-name
+````
+
+### 5. Open a Pull Request
+
+ 1. Go to the repo on GitHub.
+
+ 2. You’ll see a “Compare & pull request” button (after pushing your branch).
+
+ 3. Click it → this opens the PR form.
+
+
+
+### 6. Fill in PR Details
+
+Title: Short and descriptive (e.g., “Add login form feature”).
+
+Description: Explain what you changed and why.
+Example:
+
+### Changes Made
+- Added login form component with email/password fields
+- Integrated validation
+- Added tests for form submission
+
+### Why
+This implements user login functionality.
+
+### 7. Submit the PR
+
+- Click Create Pull Request ✅.
+
+- Now, the repo maintainer (or your teammate) can review it.
