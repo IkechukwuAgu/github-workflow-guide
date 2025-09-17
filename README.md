@@ -48,6 +48,7 @@ git remote add origin https://github.com/<your-username>/my-first-github-project
 ```bash
 git push -u origin main
 ```
+---
 
 GitHub Branching Workflow
 -------------------------------
@@ -136,4 +137,119 @@ git checkout -b hotfix/bug-fix
 * bugfix/* → bug fixes
 
 * hotfix/* → urgent fixes
+
+---
+
+
+
+#### 📌 Example Workflow in Action 
+
+1. Clone repo:
+
+```bash
+git clone git@github.com:username/project.git
+cd project
+```
+
+
+2. Create branch for feature:
+
+```bash 
+git checkout -b feature/user-profile
+```
+
+
+3. Work, commit, and push:
+
+```bash 
+git push origin feature/user-profile 
+```
+
+
+4. Open PR → Review → Merge → Delete branch.
+
+<p align="center">
+<img src="./img/ChatGPT Image Sep 16, 2025, 10_28_31 PM.png" alt="My Logo" width="200">
+</p>
+
+
+--- 
+
+🔥 What is a Merge Conflict?
+---
+
+A merge conflict happens when Git can’t automatically combine changes from two branches because the same part of the code was changed differently in each branch.
+Git doesn’t know which version to keep — so it asks you to resolve it manually.
+
+#### ⚠️ Example Scenario
+
+1. You and your teammate both branch off main.
+
+*  You change line 10 of index.html.
+
+*  Your teammate also changes line 10.
+
+2. When you try to merge, Git says:
+
+```bash
+ CONFLICT (content): Merge conflict in index.html 
+ ```
+
+#### 🛠 How to Fix a Merge Conflict
+
+1. See which files have conflicts
+
+```bash
+ git status 
+```
+
+##### 1. Open the conflicted file
+
+You’ll see markers like this:
+
+```html
+<<<<<<< HEAD
+<p>Hello from my branch</p>
+=======
+<p>Hello from teammate's branch</p>
+>>>>>>> feature/teammate
+
+```
+* <<<<<<< HEAD → your code (current branch)
+
+* ======= → divider  
+
+*  >>>>>>> → code from the branch you are merging in
+
+##### 3. Resolve the conflict
+
+Decide what to keep:
+
+```html 
+<p>Hello from both branches</p> 
+```
+
+
+ ##### 4. Mark conflict as resolved
+git add index.html
+
+##### 5. Complete the merge
+
+```bash 
+git commit
+```
+
+
+Now the merge is successful 🚀.
+
+---
+🔑 Tips
+
+* Communicate with teammates — agree on which changes to keep.
+
+* Use tools like VS Code, GitHub Desktop, or GitHub’s web editor to resolve conflicts more easily.
+
+* Keep commits small and frequent to reduce conflict chances.
+
+---
 
